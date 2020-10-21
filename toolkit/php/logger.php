@@ -53,7 +53,7 @@ class GH_LOG {
 		'hidden'    => '8',
 	);
 
-	public static $eof = '\n';
+	static $eof = "\n";
 
 	/**
 	 * Logs a string to console.
@@ -95,7 +95,7 @@ class GH_LOG {
 		$colored_string = '';
 
 		if ( isset( self::$foreground_colors[ $foreground_color ] ) ) {
-			$colored_string .= '\033[' . self::$foreground_colors[ $foreground_color ] . 'm';
+			$colored_string .= "\033[" . self::$foreground_colors[ $foreground_color ] . 'm';
 		} else {
 			die( $foreground_color . ' not a valid color' );
 		}
@@ -104,13 +104,13 @@ class GH_LOG {
 
 		foreach ( $args as $option ) {
 			if ( isset( self::$background_colors[ $option ] ) ) {
-				$colored_string .= '\033[' . self::$background_colors[ $option ] . 'm';
+				$colored_string .= "\033[" . self::$background_colors[ $option ] . 'm';
 			} elseif ( isset( self::$options[ $option ] ) ) {
-				$colored_string .= '\033[' . self::$options[ $option ] . 'm';
+				$colored_string .= "\033[" . self::$options[ $option ] . 'm';
 			}
 		}
 
-		$colored_string .= $string . '\033[0m';
+		$colored_string .= $string . "\033[0m";
 		return $colored_string;
 	}
 }
