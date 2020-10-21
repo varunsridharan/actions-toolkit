@@ -19,9 +19,9 @@ function gh_validate_env( $key, $custom_message ) {
 }
 
 function gh_set_env_multiline( $key, $value, $silent = false ) {
-	echo 'echo "' . $key . '<<EOF" >> $GITHUB_ENV';
-	echo 'echo "' . addslashes( $value ) . '" >> $GITHUB_ENV';
-	echo 'echo "EOF" >> $GITHUB_ENV';
+	shell_exec( 'echo "' . $key . '<<EOF" >> $GITHUB_ENV' );
+	shell_exec( 'echo "' . addslashes( $value ) . '" >> $GITHUB_ENV' );
+	shell_exec( 'echo "EOF" >> $GITHUB_ENV' );
 	if ( ! $silent ) {
 		gh_log( "✔️ ENV  : ${key}  =>  ${value}" );
 	}
@@ -29,7 +29,7 @@ function gh_set_env_multiline( $key, $value, $silent = false ) {
 }
 
 function gh_set_env( $key, $value, $silent = false ) {
-	echo 'echo "' . $key . '=' . $value . '" >> $GITHUB_ENV';
+	shell_exec( 'echo "' . $key . '=' . $value . '" >> $GITHUB_ENV' );
 	if ( ! $silent ) {
 		gh_log( "✔️ ENV  : ${key}  =>  ${value}" );
 	}
