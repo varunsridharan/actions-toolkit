@@ -119,10 +119,10 @@ and more recently with desktop publishing software like Aldus PageMaker includin
 #### `gh_input`
 ```shell script
 # Get The Input Variable's Value
-INPUT_VALUE=$(gh_input "CUSTOM_INPUT_NAME")
+INPUT_VALUE=$(gh_input "INPUT_CUSTOMNAME")
 
 # Provides Default Value if Input Variable Is Empty / Not Exists
-INPUT_VALUE=$(gh_input "CUSTOM_INPUT_NAME" "MY_Default_VALUE")
+INPUT_VALUE=$(gh_input "INPUT_CUSTOMNAME" "MY_Default_VALUE")
 ```
 
 #### `gh_validate_input`
@@ -235,7 +235,27 @@ GH_LOG::Log( 'This Text Will Be [reverse]', 'normal', false, 'reverse' );
 
 GH_LOG::Log( 'This Text Will Be [hidden]', 'normal', false, 'hidden' );
 ```
+#### `gh_input`
+```php
+# Get The ENV Variable's Value
+$INPUT_VALUE = gh_input( 'INPUT_NAME1' );
 
+# Provides Default Value if ENV Variable Is Empty / Not Exists
+$INPUT_VALUE = gh_input( "INPUT_NAME1", "MY_Default_VALUE" );
+```
+
+#### `gh_validate_input`
+```php
+# Check if ENV exists if not throws an error.
+gh_validate_input( 'INPUT_VARNAME2' );
+
+# Check if ENV exists if not throws an error. but the error message can be set.
+gh_validate_input( "INPUT_VARNAME2", "Sorry Can't Process The Request. CUSTOM_ENV2 IS REQUIRED" );
+```
+
+
+
+---
 ## 📝 Changelog
 All notable changes to this project will be documented in this file.
 
