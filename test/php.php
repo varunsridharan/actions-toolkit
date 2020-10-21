@@ -62,3 +62,4 @@ gh_log( gh_input( 'VALUE2' ) );
 gh_log( gh_input( 'VALUE3' ) );
 gh_log( gh_input( 'VALUE4', 'DEFAULT_VALUE' ) );
 gh_validate_input( 'VALUE5', 'Sorry Can\'t Process VALUE5 Input Is Required' );
+gh_validate_input( 'VALUE6' );
