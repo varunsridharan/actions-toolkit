@@ -1,5 +1,8 @@
-# Github Actions Toolkit
+![https://cdn.svarun.dev/gh/varunsridharan/actions-toolkit/banner.jpg](https://cdn.svarun.dev/gh/varunsridharan/actions-toolkit/banner.jpg)
+
+<p align="center">
 ~ Predefined Functions For Github Actions SHELL & PHP ~
+</p>
 
 ## ⚙️Installation
 ### 🐳 Docker - Alpine
