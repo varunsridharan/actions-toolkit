@@ -58,12 +58,12 @@ class GH_LOG {
 	/**
 	 * Logs a string to console.
 	 *
-	 * @param string  $str Input String
-	 * @param string  $color Text Color
+	 * @param string $str Input String
+	 * @param string $color Text Color
 	 * @param  [type]  $background Background Color
 	 */
-	public static function log( $str = '', $color = 'normal', $background_color = null ) {
-		gh_log( self::$color( $str, $background_color ) );
+	public static function log( $str = '', $color = 'normal', $background_color = null, $options = false ) {
+		gh_log( self::$color( $str, $background_color, $options ) );
 	}
 
 	/**
