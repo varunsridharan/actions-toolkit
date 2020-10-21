@@ -785,3 +785,7 @@ ASALocalRun/
 
 .all-contributorsrc
 .github/
+
+composer/installed.json
+composer/LICENSE
+milo/github-api/readme.md
