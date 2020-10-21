@@ -56,6 +56,7 @@ GH_LOG::Log( 'This Text Will Be [blink]', 'normal', false, 'blink' );
 GH_LOG::Log( 'This Text Will Be [reverse]', 'normal', false, 'reverse' );
 GH_LOG::Log( 'This Text Will Be [hidden]', 'normal', false, 'hidden' );
 
-
-gh_log( "Input Value For VALUE2" );
-gh_log( print_r( $_ENV ) );
+print_r( gh_validate_input( 'VALUE1' ) );
+print_r( gh_validate_input( 'VALUE2' ) );
+print_r( gh_validate_input( 'VALUE3' ) );
+print_r( gh_validate_input( 'VALUE32', 'Important Input Variable Not Found !' ) );
