@@ -1,6 +1,6 @@
 <?php
 
-function gh_log( $content ) {
+function gh_log( $content = '' ) {
 	echo $content . PHP_EOL;
 }
 
