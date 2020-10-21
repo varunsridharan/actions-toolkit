@@ -1,19 +1,19 @@
 <?php
 
 function gh_log( $content ) {
-	echo $content;
+	echo $content . PHP_EOL;
 }
 
 function gh_log_group_start( $content ) {
-	echo "###[group]$content";
+	gh_log( "###[group]$content" );
 }
 
 function gh_log_group_end() {
-	echo '###[endgroup]';
+	gh_log( '###[endgroup]' );
 }
 
 function gh_log_yellow( $content ) {
-	echo "###[warning]$content";
+	gh_log( "###[warning]$content" );
 }
 
 function gh_log_warning( $content ) {
@@ -21,7 +21,7 @@ function gh_log_warning( $content ) {
 }
 
 function gh_log_red( $content ) {
-	echo "###[error]$content";
+	gh_log( "###[error]$content" );
 }
 
 function gh_log_error( $content ) {
@@ -29,5 +29,5 @@ function gh_log_error( $content ) {
 }
 
 function gh_log_debug( $content ) {
-	echo "::debug::$content";
+	gh_log( "::debug::$content" );
 }
