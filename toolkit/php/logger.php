@@ -60,18 +60,9 @@ class GH_LOG {
 	 *
 	 * @param string  $str Input String
 	 * @param string  $color Text Color
-	 * @param boolean $newline Append EOF?
 	 * @param  [type]  $background Background Color
 	 */
-	public static function log( $str = '', $color = 'normal', $newline = true, $background_color = null ) {
-		if ( is_bool( $color ) ) {
-			$newline = $color;
-			$color   = 'normal';
-		} elseif ( is_string( $color ) && is_string( $newline ) ) {
-			$background_color = $newline;
-			$newline          = true;
-		}
-		$str = $newline ? $str . self::$eof : $str;
+	public static function log( $str = '', $color = 'normal', $background_color = null ) {
 		gh_log( self::$color( $str, $background_color ) );
 	}
 
