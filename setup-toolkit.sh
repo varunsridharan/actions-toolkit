@@ -1,8 +1,8 @@
 #!/bin/sh
 set -e
 
-GITHUB_SCRIPTS_FOLDER="actions-alpine-main"
-GITHUB_SCRIPTS_URL="https://github.com/varunsridharan/actions-alpine/archive/main.zip"
+GITHUB_SCRIPTS_FOLDER="actions-toolkit-main"
+GITHUB_SCRIPTS_URL="https://github.com/varunsridharan/actions-toolkit/archive/main.zip"
 
 ## Clone Github Toolkit Files To /gh-toolkit/
 mkdir /gh-toolkit/
