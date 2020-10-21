@@ -31,3 +31,28 @@ jobs:
           TEST_ENV_2: ${{ env.TEST_ENV_2 }}
           TEST_ENV_1: ${{ env.TEST_ENV_1 }}
 
+  phptoolkit:
+    name: "🐚  PHP Tookit"
+    runs-on: ubuntu-latest
+    steps:
+      - name: "📥  Fetching Repository Contents"
+        uses: actions/checkout@main
+
+      - name: "📥  Install Alpine & Test"
+        uses: "./test/alpine-php/"
+        with:
+          value1: "This is value1"
+          value2: "This is value2"
+          value3: "This is value3"
+        env:
+          AC_ENV_1: "This Is ENV VAL1"
+          AC_ENV_2: "This Is ENV VAL2"
+          AC_ENV_3: "This Is ENV VAL3"
+
+      - name: "Test ENV Vars"
+        run: |
+          echo "This will check for env vars $TEST_ENV_2 ||----|| $TEST_ENV_1"
+        env:
+          TEST_ENV_2: ${{ env.TEST_ENV_2 }}
+          TEST_ENV_1: ${{ env.TEST_ENV_1 }}
+

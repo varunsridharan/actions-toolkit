@@ -1,9 +1,5 @@
 #!/bin/sh
-
 set -e
-
-GITHUB_SCRIPTS_FOLDER="actions-alpine-main"
-GITHUB_SCRIPTS_URL="https://github.com/varunsridharan/actions-alpine/archive/main.zip"
 
 ## Install Required Dependencies
 apk add bash git curl unzip wget

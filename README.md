@@ -22,6 +22,13 @@ source /gh-toolkit/shell.sh
 gh_log "Hello World"
 ```
 
+### PHP
+```php
+require_once '/gh-toolkit/php.php';
+
+GH_LOG::log('Hello World');
+```
+
 ## 📖 Documentation
 ### Shell Script
 

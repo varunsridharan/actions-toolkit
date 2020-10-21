@@ -1,5 +1,4 @@
 #!/bin/sh
-
 set -e
 
 GITHUB_SCRIPTS_FOLDER="actions-alpine-main"
