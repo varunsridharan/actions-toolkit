@@ -13,6 +13,7 @@ function gh_validate_env( $key, $custom_message ) {
 		$custom_message = sprintf( $custom_message, $key );
 		$custom_message = '🚩  ' . $custom_message;
 		gh_log_red( $custom_message );
+		shell_exec( 'exit;' );
 		exit;
 	}
 	return gh_env( $key );
