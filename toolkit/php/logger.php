@@ -72,7 +72,7 @@ class GH_LOG {
 			$newline          = true;
 		}
 		$str = $newline ? $str . self::$eof : $str;
-		echo self::$color( $str, $background_color );
+		gh_log( self::$color( $str, $background_color ) );
 	}
 
 	/**
