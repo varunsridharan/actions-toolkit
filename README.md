@@ -153,7 +153,7 @@ gh_log( "Log Line 3" );
 gh_log_group_end();
 ```
 
-#### `GH_LOG::*` && `gh_log_*`
+#### `gh_log_*`
 ```php
 # Github Action Warning Log
 gh_log_yellow( 'This Will Be Displayed As Warning In Github Actions Log' );
@@ -169,21 +169,71 @@ gh_log_error( 'This Will Be Displayed With A Error Emoji' );
 
 # Github Actions Debug Log
 gh_log_debug( 'This Will Be Displayed As Debug Log in Github Actions Log If Debug Enabled' );
+```
 
-// ::log method usage
-// -------------------------------------------------------
-GH_LOG::log( 'Im Red!', 'red' );
-GH_LOG::log( 'Im Blue on White!', 'white', true, 'blue' );
-GH_LOG::log( 'I dont have an EOF', false );
-GH_LOG::log( "\tThis is where I come in.", 'light_green' );
-GH_LOG::log( 'You can swap my variables', 'black', 'yellow' );
-GH_LOG::log( str_repeat( '-', 60 ) );
+#### `GH_LOG::*`
+```php
+GH_LOG::Log( 'My Background Color Will Be {black}', 'normal', 'black' );
 
-GH_LOG::blue( 'Blue Text' );
-GH_LOG::black( 'Black Text on Magenta Background', 'magenta' );
-GH_LOG::red( 'Im supposed to be red, but Im reversed!', 'reverse' );
-GH_LOG::red( 'I have an underline', 'underline' );
-GH_LOG::blue( 'I should be blue on light gray but Im reversed too.', 'light_gray', 'reverse' );
+GH_LOG::Log( 'My Background Color Will Be {red}', 'normal', 'red' );
+
+GH_LOG::Log( 'My Background Color Will Be {green}', 'normal', 'green' );
+
+GH_LOG::Log( 'My Background Color Will Be {yellow}', 'normal', 'yellow' );
+
+GH_LOG::Log( 'My Background Color Will Be {blue}', 'normal', 'blue' );
+
+GH_LOG::Log( 'My Background Color Will Be {magenta}', 'normal', 'magenta' );
+
+GH_LOG::Log( 'My Background Color Will Be {cyan}', 'normal', 'cyan' );
+
+GH_LOG::Log( 'My Background Color Will Be {light_gray}', 'normal', 'light_gray' );
+
+GH_LOG::Log( 'My Text Color Will Be {bold}', 'bold' );
+
+GH_LOG::Log( 'My Text Color Will Be {dim}', 'dim' );
+
+GH_LOG::Log( 'My Text Color Will Be {black}', 'black' );
+
+GH_LOG::Log( 'My Text Color Will Be {dark_gray}', 'dark_gray' );
+
+GH_LOG::Log( 'My Text Color Will Be {blue}', 'blue' );
+
+GH_LOG::Log( 'My Text Color Will Be {light_blue}', 'light_blue' );
+
+GH_LOG::Log( 'My Text Color Will Be {green}', 'green' );
+
+GH_LOG::Log( 'My Text Color Will Be {light_green}', 'light_green' );
+
+GH_LOG::Log( 'My Text Color Will Be {cyan}', 'cyan' );
+
+GH_LOG::Log( 'My Text Color Will Be {light_cyan}', 'light_cyan' );
+
+GH_LOG::Log( 'My Text Color Will Be {red}', 'red' );
+
+GH_LOG::Log( 'My Text Color Will Be {light_red}', 'light_red' );
+
+GH_LOG::Log( 'My Text Color Will Be {purple}', 'purple' );
+
+GH_LOG::Log( 'My Text Color Will Be {light_purple}', 'light_purple' );
+
+GH_LOG::Log( 'My Text Color Will Be {brown}', 'brown' );
+
+GH_LOG::Log( 'My Text Color Will Be {yellow}', 'yellow' );
+
+GH_LOG::Log( 'My Text Color Will Be {light_gray}', 'light_gray' );
+
+GH_LOG::Log( 'My Text Color Will Be {white}', 'white' );
+
+GH_LOG::Log( 'My Text Color Will Be {normal}', 'normal' );
+
+GH_LOG::Log( 'This Text Will Be [underline]', 'normal', false, 'underline' );
+
+GH_LOG::Log( 'This Text Will Be [blink]', 'normal', false, 'blink' );
+
+GH_LOG::Log( 'This Text Will Be [reverse]', 'normal', false, 'reverse' );
+
+GH_LOG::Log( 'This Text Will Be [hidden]', 'normal', false, 'hidden' );
 ```
 
 ## 📝 Changelog
