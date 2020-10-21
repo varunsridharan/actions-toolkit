@@ -3,7 +3,7 @@ FROM php:cli-alpine
 #####################################
 #### Install Required Dependency ####
 #####################################
-ADD https://raw.githubusercontent.com/varunsridharan/actions-alpine/main/setup-alpine.sh /
+ADD https://raw.githubusercontent.com/varunsridharan/actions-toolkit/main/setup-alpine.sh /
 
 ########################################
 #### Configure Required Dependency #####

@@ -6,7 +6,7 @@
 ```dockerfile
 FROM alpine:latest
 
-ADD https://raw.githubusercontent.com/varunsridharan/actions-alpine/master/setup-alpine.sh /
+ADD https://raw.githubusercontent.com/varunsridharan/actions-toolkit/master/setup-alpine.sh /
 RUN chmod uga+x /setup-alpine.sh
 RUN sh /setup-alpine.sh
 ```
