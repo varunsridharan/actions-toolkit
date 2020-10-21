@@ -238,19 +238,19 @@ GH_LOG::Log( 'This Text Will Be [hidden]', 'normal', false, 'hidden' );
 #### `gh_input`
 ```php
 # Get The ENV Variable's Value
-$INPUT_VALUE = gh_input( 'INPUT_NAME1' );
+$VALUE = gh_input( 'VALUE3' );
 
 # Provides Default Value if ENV Variable Is Empty / Not Exists
-$INPUT_VALUE = gh_input( "INPUT_NAME1", "MY_Default_VALUE" );
+$VALUE = gh_input( 'VALUE4', 'DEFAULT_VALUE' );
 ```
 
 #### `gh_validate_input`
 ```php
-# Check if ENV exists if not throws an error.
-gh_validate_input( 'INPUT_VARNAME2' );
+# Check if INPUT exists if not throws an error.
+gh_validate_input( 'VALUE5' );
 
-# Check if ENV exists if not throws an error. but the error message can be set.
-gh_validate_input( "INPUT_VARNAME2", "Sorry Can't Process The Request. CUSTOM_ENV2 IS REQUIRED" );
+# Check if INPUT exists if not throws an error. but the error message can be set.
+gh_validate_input( 'VALUE5', 'Sorry Can\'t Process VALUE5 Input Is Required' );
 ```
 
 

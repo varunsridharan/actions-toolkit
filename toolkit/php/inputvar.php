@@ -29,9 +29,9 @@ function gh_validate_input( $key, $custom_message = false ) {
 	if ( null === gh_input( $key ) ) {
 		$custom_message = ( false === $custom_message ) ? '%s Not Found. Please Set The Input Value using WITH in workflow file' : $custom_message;
 		$custom_message = sprintf( '%s', $custom_message );
-		$custom_message = '🚨 ' . $custom_message;
-		gh_log_red( $custom_message );
+		gh_log_red( '🚨 ' . $custom_message );
 		die();
 	}
 	return gh_input( $key );
 }
+

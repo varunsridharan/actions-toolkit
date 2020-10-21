@@ -56,7 +56,9 @@ GH_LOG::Log( 'This Text Will Be [blink]', 'normal', false, 'blink' );
 GH_LOG::Log( 'This Text Will Be [reverse]', 'normal', false, 'reverse' );
 GH_LOG::Log( 'This Text Will Be [hidden]', 'normal', false, 'hidden' );
 
-print_r( gh_validate_input( 'VALUE1' ) );
-print_r( gh_validate_input( 'VALUE2' ) );
-print_r( gh_validate_input( 'VALUE3' ) );
-print_r( gh_validate_input( 'VALUE32', 'Important Input Variable Not Found !' ) );
+# Get The ENV Variable's Value
+gh_log( gh_input( 'VALUE1' ) );
+gh_log( gh_input( 'VALUE2' ) );
+gh_log( gh_input( 'VALUE3' ) );
+gh_log( gh_input( 'VALUE4', 'DEFAULT_VALUE' ) );
+gh_validate_input( 'VALUE5', 'Sorry Can\'t Process VALUE5 Input Is Required' );
