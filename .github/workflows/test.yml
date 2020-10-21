@@ -24,12 +24,18 @@ jobs:
           AC_ENV_2: "This Is ENV VAL2"
           AC_ENV_3: "This Is ENV VAL3"
 
-      - name: "Test ENV Vars"
+      - name: "Test ENV Variabls"
         run: |
-          echo "This will check for env vars $TEST_ENV_2 ||----|| $TEST_ENV_1"
+          echo "ENV_VAR_NAME : $ENV_VAR_NAME \n"
+          echo "ENV_VAR_NAME2 : $ENV_VAR_NAME2 \n"
+          echo "ENV_VAR_NAME3 : $ENV_VAR_NAME3 \n"
+          echo "VARIABLE_NAME : $VARIABLE_NAME \n"
         env:
-          TEST_ENV_2: ${{ env.TEST_ENV_2 }}
-          TEST_ENV_1: ${{ env.TEST_ENV_1 }}
+          ENV_VAR_NAME: ${{ env.ENV_VAR_NAME }}
+          ENV_VAR_NAME2: ${{ env.ENV_VAR_NAME2 }}
+          ENV_VAR_NAME3: ${{ env.ENV_VAR_NAME3 }}
+          VARIABLE_NAME: ${{ env.VARIABLE_NAME }}
+
 
   phptoolkit:
     name: "🐚  PHP Tookit"
@@ -49,10 +55,15 @@ jobs:
           AC_ENV_2: "This Is ENV VAL2"
           AC_ENV_3: "This Is ENV VAL3"
 
-      - name: "Test ENV Vars"
+      - name: "Test ENV Variabls"
         run: |
-          echo "This will check for env vars $TEST_ENV_2 ||----|| $TEST_ENV_1"
+          echo "ENV_VAR_NAME : $ENV_VAR_NAME \n"
+          echo "ENV_VAR_NAME2 : $ENV_VAR_NAME2 \n"
+          echo "ENV_VAR_NAME3 : $ENV_VAR_NAME3 \n"
+          echo "VARIABLE_NAME : $VARIABLE_NAME \n"
         env:
-          TEST_ENV_2: ${{ env.TEST_ENV_2 }}
-          TEST_ENV_1: ${{ env.TEST_ENV_1 }}
+          ENV_VAR_NAME: ${{ env.ENV_VAR_NAME }}
+          ENV_VAR_NAME2: ${{ env.ENV_VAR_NAME2 }}
+          ENV_VAR_NAME3: ${{ env.ENV_VAR_NAME3 }}
+          VARIABLE_NAME: ${{ env.VARIABLE_NAME }}
 

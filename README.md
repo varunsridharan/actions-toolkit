@@ -253,6 +253,22 @@ gh_validate_input( 'VALUE5' );
 gh_validate_input( 'VALUE5', 'Sorry Can\'t Process VALUE5 Input Is Required' );
 ```
 
+#### `gh_set_env` && `gh_set_env_silent`
+```php
+# Sets A New ENV Variable And Logs A Success Message
+gh_set_env( "ENV_VAR_NAME", "ENV_VAR_CONTENT" );
+gh_set_env( "ENV_VAR_NAME2", "ENV_VAR_CONTENT" );
+
+# Sets A New ENV Variable And No Log Will Be Generated
+gh_set_env_silent( "ENV_VAR_NAME3", "Custom Content Here" );
+
+# Sets A New ENV Variable Which Will have Multiple Lines Of String
+gh_set_env_multiline( "VARIABLE_NAME", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." );
+```
 
 
 ---
