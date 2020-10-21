@@ -1,0 +1,19 @@
+name: 'Alpine Docker Container'
+description: ''
+author: 'varunsridharan'
+
+inputs:
+  value1:
+    description: 'Sample Value1'
+  value2:
+    description: 'Sample Value1'
+  value3:
+    description: 'Sample Value1'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.value1 }}
+    - ${{ inputs.value2 }}
+    - ${{ inputs.value3 }}

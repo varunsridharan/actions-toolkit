@@ -1,0 +1,26 @@
+#!/bin/sh
+
+set -e
+
+GIT_EMAIL=""
+GIT_USERNAME=""
+
+if [ -z "$1" ]; then
+  GIT_USERNAME="Github Actions Bot"
+else
+  GIT_USERNAME="$1"
+fi
+
+if [ -z "$2" ]; then
+  GIT_USERNAME="githubactionbot@gmail"
+else
+  GIT_USERNAME="$2"
+fi
+
+git config --global user.email "$1"
+git config --global user.name "$2"
+
+echo "###[group] Git Config"
+echo "Username : $GIT_USERNAME"
+echo "EMail : $GIT_EMAIL"
+echo "###[endgroup]"
