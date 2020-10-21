@@ -53,8 +53,6 @@ class GH_LOG {
 		'hidden'    => '8',
 	);
 
-	static $eof = "\n";
-
 	/**
 	 * Logs a string to console.
 	 *
