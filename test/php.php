@@ -32,8 +32,6 @@ GH_LOG::Log( 'My Background Color Will Be {blue}', 'normal', 'blue' );
 GH_LOG::Log( 'My Background Color Will Be {magenta}', 'normal', 'magenta' );
 GH_LOG::Log( 'My Background Color Will Be {cyan}', 'normal', 'cyan' );
 GH_LOG::Log( 'My Background Color Will Be {light_gray}', 'normal', 'light_gray' );
-
-
 GH_LOG::Log( 'My Text Color Will Be {bold}', 'bold' );
 GH_LOG::Log( 'My Text Color Will Be {dim}', 'dim' );
 GH_LOG::Log( 'My Text Color Will Be {black}', 'black' );
@@ -53,8 +51,7 @@ GH_LOG::Log( 'My Text Color Will Be {yellow}', 'yellow' );
 GH_LOG::Log( 'My Text Color Will Be {light_gray}', 'light_gray' );
 GH_LOG::Log( 'My Text Color Will Be {white}', 'white' );
 GH_LOG::Log( 'My Text Color Will Be {normal}', 'normal' );
-
-GH_LOG( 'This Text Will Be [underline]', 'normal', false, 'underline' );
-GH_LOG( 'This Text Will Be [blink]', 'normal', false, 'blink' );
-GH_LOG( 'This Text Will Be [reverse]', 'normal', false, 'reverse' );
-GH_LOG( 'This Text Will Be [hidden]', 'normal', false, 'hidden' );
+GH_LOG::Log( 'This Text Will Be [underline]', 'normal', false, 'underline' );
+GH_LOG::Log( 'This Text Will Be [blink]', 'normal', false, 'blink' );
+GH_LOG::Log( 'This Text Will Be [reverse]', 'normal', false, 'reverse' );
+GH_LOG::Log( 'This Text Will Be [hidden]', 'normal', false, 'hidden' );
