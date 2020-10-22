@@ -33,7 +33,31 @@ GH_LOG::log('Hello World');
 ```
 
 ## 📖 Documentation
-### Shell Script
+### Shell Scripts
+```shell script
+# Configure GIT Username & EMail
+# Defaults To "Github Action Bot" "githubactionbot@gmail.com"
+gitconfig "Git Commit Username" "Git Commit Email"
+
+# Install Bash Script In AlpineOS
+installbash
+
+# Install Curl In AlpineOS
+installcurl
+
+# Install Git In AlpineOS
+# Installed By Default if setup-alpine.sh script used
+installgit
+
+# Install wget In AlpineOS
+# Installed By Default if setup-alpine.sh script used
+installwget
+
+# Install unzip In AlpineOS
+# Installed By Default if setup-alpine.sh script used
+installunzip
+```
+### Shell Functions
 
 #### `gh_set_output`
 ```shell script
