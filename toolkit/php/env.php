@@ -34,9 +34,19 @@ function gh_set_env( $key, $value, $silent = false ) {
 	if ( ! $silent ) {
 		gh_log( "✔️ ENV  : ${key}  =>  ${value}" );
 	}
-
 }
 
 function gh_set_env_silent( $key, $value ) {
 	gh_set_env( $key, $value, true );
+}
+
+function gh_set_env_not_exists( $key, $value, $silent = false ) {
+	if ( ! isset( $_ENV[ $key ] ) ) {
+		gh_set_env( $key, $value, $silent );
+		return true;
+	}
+	if ( ! $silent ) {
+		gh_log( "ℹ️ ENV ${key} ALREADY EXISTS WITH VALUE - {$_ENV[$key]}" );
+	}
+	return false;
 }
