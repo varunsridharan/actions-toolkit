@@ -15,6 +15,10 @@ gh_log_group_start "Group Name"
 gh_log "Log Line 1"
 gh_log "Log Line 2"
 gh_log "Log Line 3"
+gh_log_group_start "Group Name2"
+gh_log "Log Line 2"
+gh_log "Log Line 3"
+gh_log_group_end
 gh_log_group_end
 gh_log
 
