@@ -2,7 +2,7 @@
 set -e
 
 ## Install Required Dependencies
-apk add git unzip wget
+apk add bash curl git lftp rsync unzip wget zip
 
 ## Clone Github Toolkit Files To /gh-toolkit/
 wget https://raw.githubusercontent.com/varunsridharan/actions-toolkit/main/setup-toolkit.sh
