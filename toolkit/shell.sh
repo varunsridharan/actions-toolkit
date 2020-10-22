@@ -3,6 +3,7 @@
 source /gh-toolkit/shell/logger.sh
 source /gh-toolkit/shell/inputvars.sh
 source /gh-toolkit/shell/envars.sh
+source /gh-toolkit/shell/color-log.sh
 
 gh_set_output() {
   echo "::set-output name=${1}::${2}"
