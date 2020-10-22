@@ -11,3 +11,11 @@ gh_set_output() {
 gh_mask_output() {
   echo "::add-mask::${1}"
 }
+
+is_empty_var(){
+  if [ -z "$1" ]; then
+    echo "$2"
+  else
+    echo "$1"
+  fi
+}

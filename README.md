@@ -38,26 +38,18 @@ GH_LOG::log('Hello World');
 # Configure GIT Username & EMail
 # Defaults To "Github Action Bot" "githubactionbot@gmail.com"
 gitconfig "Git Commit Username" "Git Commit Email"
-
-# Install Bash Script In AlpineOS
-installbash
-
-# Install Curl In AlpineOS
-installcurl
-
-# Install Git In AlpineOS
-# Installed By Default if setup-alpine.sh script used
-installgit
-
-# Install wget In AlpineOS
-# Installed By Default if setup-alpine.sh script used
-installwget
-
-# Install unzip In AlpineOS
-# Installed By Default if setup-alpine.sh script used
-installunzip
 ```
 ### Shell Functions
+
+#### `is_empty_var`
+```shell script
+# Below Will Output DEFAULT_NAME if $NAME is not set / empty
+echo "$(is_empty_var "${NAME}" "DEFAULT_NAME")"
+
+# Below Will Output 43 as $AGE is set
+AGE="43"
+echo "$(is_empty_var "${AGE}" "33")"
+```
 
 #### `gh_set_output`
 ```shell script
