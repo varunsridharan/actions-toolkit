@@ -15,11 +15,26 @@ gh_log_group_start "Group Name"
 gh_log "Log Line 1"
 gh_log "Log Line 2"
 gh_log "Log Line 3"
-gh_log_group_start "Group Name2"
-gh_log "Log Line 2"
-gh_log "Log Line 3"
 gh_log_group_end
+
+gh_log_group_start "Colored Log"
+gh_log "$(log_green "This Log Will Be In log_green")"
+gh_log "$(log_red "This Log Will Be In log_red")"
+gh_log "$(log_blue "This Log Will Be In log_blue")"
+gh_log "$(log_purple "This Log Will Be In log_purple")"
+gh_log "$(log_yellow "This Log Will Be In log_yellow")"
+gh_log "$(log_cyan "This Log Will Be In log_cyan")"
 gh_log_group_end
+
+gh_log_group_start "Single Word Colored Log"
+gh_log "This Log Will Have Only A Text In Color $(log_green "log_green")"
+gh_log "This Log Will Have Only A Text In Color $(log_red "log_red")"
+gh_log "This Log Will Have Only A Text In Color $(log_blue "log_blue")"
+gh_log "This Log Will Have Only A Text In Color $(log_purple "log_purple")"
+gh_log "This Log Will Have Only A Text In Color $(log_yellow "log_yellow")"
+gh_log "This Log Will Have Only A Text In Color $(log_cyan "log_cyan")"
+gh_log_group_end
+
 gh_log
 
 # {STRING} To be masked in Github Action's Log
