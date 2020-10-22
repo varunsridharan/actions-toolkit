@@ -1,1 +1,26 @@
 name: "On Push"
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  rebuild_dockers:
+    name: "Trigger 🐳 Rebuild"
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: "Rebuild Alpine 🐳 Hub"
+        uses: benc-uk/workflow-dispatch@v1
+        with:
+          workflow: "Release - 🐳 Hub"
+          repo: varunsridharan/actions-alpine
+          token: ${{ secrets.GH_PUBLIC_REPO }}
+
+      - name: "Rebuild Alpine Github 🐳 Registry"
+        uses: benc-uk/workflow-dispatch@v1
+        with:
+          workflow: "Release - Github 🐳 Registry"
+          repo: varunsridharan/actions-alpine
+          token: ${{ secrets.GH_PUBLIC_REPO }}
