@@ -24,3 +24,17 @@ jobs:
           workflow: "Release - Github 🐳 Registry"
           repo: varunsridharan/actions-alpine
           token: ${{ secrets.GH_PUBLIC_REPO }}
+
+      - name: "Rebuild Alpine PHP CLI 🐳 Hub"
+        uses: benc-uk/workflow-dispatch@v1
+        with:
+          workflow: "Release - 🐳 Hub"
+          repo: varunsridharan/actions-alpine-php
+          token: ${{ secrets.GH_PUBLIC_REPO }}
+
+      - name: "Rebuild Alpine PHP CLI Github 🐳 Registry"
+        uses: benc-uk/workflow-dispatch@v1
+        with:
+          workflow: "Release - Github 🐳 Registry"
+          repo: varunsridharan/actions-alpine-php
+          token: ${{ secrets.GH_PUBLIC_REPO }}
