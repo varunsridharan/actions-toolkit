@@ -3,7 +3,7 @@
 COLOR_PALLET_TYPE="0"
 
 __colortext() {
-  echo " \e[$COLOR_PALLET_TYPE;$2m$1\e[0m"
+  echo -e " \e[$COLOR_PALLET_TYPE;$2m$1\e[0m"
 }
 
 log_green() {
