@@ -1,6 +1,6 @@
 <?php
-#include_once '/gh-toolkit/php.php';
-include_once '/gh-toolkit/gh-api.php';
+include_once '/gh-toolkit/php.php';
+#include_once '/gh-toolkit/gh-api.php';
 
 global $github_api;
 $data = $github_api->decode( $github_api->get( 'repos/' . gh_env( 'GITHUB_REPOSITORY' ) ) );
@@ -9,9 +9,9 @@ gh_gitconfig();
 
 gh_gitconfig( 'AlpineOS', 'alpine@gmail.com' );
 
-gh_log_group_start( 'Github API' );
+/*gh_log_group_start( 'Github API' );
 gh_log( print_r( $data, true ) );
-gh_log_group_end();
+gh_log_group_end();*/
 
 gh_log( 'Sample Log In Github Actions' );
 gh_log_group_start( 'Group Name' );
