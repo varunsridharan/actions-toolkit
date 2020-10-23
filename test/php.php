@@ -2,8 +2,8 @@
 include_once '/gh-toolkit/php.php';
 #include_once '/gh-toolkit/gh-api.php';
 
-global $github_api;
-$data = $github_api->decode( $github_api->get( 'repos/' . gh_env( 'GITHUB_REPOSITORY' ) ) );
+/*global $github_api;
+$data = $github_api->decode( $github_api->get( 'repos/' . gh_env( 'GITHUB_REPOSITORY' ) ) );*/
 
 gh_gitconfig();
 
