@@ -12,15 +12,15 @@ else
 fi
 
 if [ -z "$2" ]; then
-  GIT_USERNAME="githubactionbot@gmail"
+  GIT_EMAIL="githubactionbot@gmail"
 else
-  GIT_USERNAME="$2"
+  GIT_EMAIL="$2"
 fi
 
-git config --global user.email "$1"
-git config --global user.name "$2"
+git config --global user.email "$GIT_EMAIL"
+git config --global user.name "$GIT_USERNAME"
 
-echo "###[group] Git Config"
-echo "Username : $GIT_USERNAME"
-echo "EMail : $GIT_EMAIL"
+echo "###[group] 🗃 Git Config"
+echo "  > Name  : $GIT_USERNAME"
+echo "  > Email : $GIT_EMAIL"
 echo "###[endgroup]"
