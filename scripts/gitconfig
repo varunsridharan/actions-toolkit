@@ -12,7 +12,7 @@ else
 fi
 
 if [ -z "$2" ]; then
-  GIT_EMAIL="githubactionbot@gmail"
+  GIT_EMAIL="githubactionbot@gmail.com"
 else
   GIT_EMAIL="$2"
 fi
