@@ -1,6 +1,9 @@
 <?php
 
 function gh_log( $content = '' ) {
+	if ( is_array( $content ) ) {
+		$content = print_r( $content, true );
+	}
 	echo $content . PHP_EOL;
 }
 
