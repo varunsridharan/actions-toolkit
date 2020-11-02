@@ -78,6 +78,6 @@ function github_url( $raw = false, $repository = false, $branch = false, $file_p
 }
 
 function gh_commit( $file, $commit_msg = 'File Updated' ) {
-	shell_exec( 'git add -f ' . GH_WORKSPACE . $file );
+	shell_exec( 'git add -f ' . GH_WORKSPACE . fix_path( $file ) );
 	shell_exec( 'git commit -m "' . $commit_msg . '" ' );
 }
