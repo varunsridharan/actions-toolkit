@@ -34,8 +34,7 @@ function fix_path( $path ) {
 }
 
 function save_file( $save_to, $content ) {
-	$save_to = GH_WORKSPACE . fix_path( $save_to );
-	file_put_contents( $save_to, $content );
+	file_put_contents( GH_WORKSPACE . fix_path( $save_to ), $content );
 	return $save_to;
 }
 
