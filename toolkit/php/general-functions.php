@@ -66,7 +66,7 @@ function github_url( $raw = false, $repository = false, $branch = false, $file_p
 
 	if ( false !== $branch ) {
 		$branch = ( empty( $branch ) ) ? GH_REF_BRANCH : $branch;
-		$url    .= ( $raw ) ? 'blob/' : '';
+		$url    .= ( $raw ) ? '' : 'blob/';
 		$url    .= $branch . '/';
 	}
 
