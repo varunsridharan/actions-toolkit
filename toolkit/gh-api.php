@@ -1,5 +1,4 @@
 <?php
-
 if ( ! function_exists( 'gh_log' ) ) {
 	require_once __DIR__ . '/php.php';
 }
