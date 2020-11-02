@@ -56,3 +56,29 @@ function validate_save_path( $dest_path, $default_filename = '' ) {
 	}
 	return $dest_path;
 }
+
+function github_url( $raw = false, $repository = false, $branch = false, $file_path = false ) {
+	$url = ( $raw ) ? 'https://raw.githubusercontent.com/' : 'https://github.com/';
+
+	if ( false !== $repository ) {
+		$repository = ( empty( $repository ) ) ? GITHUB_REPOSITORY : $repository;
+		$url        .= $repository . '/';
+	}
+
+	if ( false !== $branch ) {
+		$branch = ( empty( $branch ) ) ? GH_REF_BRANCH : $branch;
+		$url    .= ( $raw ) ? 'blob/' : '';
+		$url    .= $branch . '/';
+	}
+
+	if ( false !== $file_path ) {
+		$url .= ( ! empty( $file_path ) ) ? $file_path : '';
+	}
+
+	return $url;
+}
+
+function gh_commit( $file, $commit_msg = 'File Updated' ) {
+	shell_exec( 'git add -f ' . GH_WORKSPACE . $file );
+	shell_exec( 'git commit -m "' . $commit_msg . '" ' );
+}

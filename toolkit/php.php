@@ -8,6 +8,7 @@ require_once __DIR__ . '/php/inputvar.php';
 require_once __DIR__ . '/php/env.php';
 require_once __DIR__ . '/php/general-functions.php';
 
+define( 'GITHUB_REPOSITORY', gh_env( 'GITHUB_REPOSITORY' ) . '/' );
 define( 'GH_WORKSPACE', gh_env( 'GITHUB_WORKSPACE' ) . '/' );
 define( 'GH_REF_BRANCH', trim( str_replace( 'refs/heads/', '', gh_env( 'GITHUB_REF' ) ) ) );
 
