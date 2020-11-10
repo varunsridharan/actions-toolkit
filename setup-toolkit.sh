@@ -24,8 +24,8 @@ cp -r * "${INSTALL_DIR}"
 sed -i 's|/gh-toolkit/|'"$INSTALL_DIR"'|g' shell.sh
 
 ## Setup Install Script
-cd "${INSTALL_DIR}${GITHUB_SCRIPTS_FOLDER}/scripts/"
-cp -r * /usr/local/bin/
+#cd "${INSTALL_DIR}${GITHUB_SCRIPTS_FOLDER}/scripts/"
+#cp -r * /usr/local/bin/
 
 ## Removed Unwanted Files.
 cd "${INSTALL_DIR}"
