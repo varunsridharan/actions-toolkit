@@ -11,7 +11,7 @@ else
 fi
 
 ## Clone Github Toolkit Files To /gh-toolkit/
-mkdir "${INSTALL_DIR}"
+mkdir -p "${INSTALL_DIR}"
 cd "${INSTALL_DIR}"
 wget "$GITHUB_SCRIPTS_URL"
 unzip ./main.zip
