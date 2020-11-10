@@ -24,7 +24,7 @@ is_empty_var() {
 gitconfig() {
   GIT_EMAIL="githubactionbot@gmail.com"
   GIT_USERNAME="Github Action Bot"
-  LOCAL="no"
+  LOCAL=false
 
   if [ ! -z "$1" ]; then
     GIT_USERNAME="$1"
@@ -34,23 +34,23 @@ gitconfig() {
     GIT_EMAIL="$2"
   fi
 
-  if [ ! -z "$3" ]; then
-    LOCAL="$2"
+  if [ -z "$3" ]; then
+    LOCAL=false
+  else
+    LOCAL=true
   fi
 
-  gh_log_group_start "🗃 Git Config"
-  gh_log "  > Name          : $GIT_USERNAME"
-  gh_log "  > Email         : $GIT_EMAIL"
-
-  if [ "$LOCAL" != true ]; then
-    gh_log "  > Global Config : true"
-    git config --global user.email "$GIT_EMAIL"
-    git config --global user.name "$GIT_USERNAME"
-  else
-    gh_log "  > Global Config : false"
+  if [ "$LOCAL" = true ]; then
+    gh_log_group_start "🗃 Git Config"
     git config user.email "$GIT_EMAIL"
     git config user.name "$GIT_USERNAME"
+  else
+    gh_log_group_start "🗃 Git Global Config"
+    git config --global user.email "$GIT_EMAIL"
+    git config --global user.name "$GIT_USERNAME"
   fi
+  gh_log "  > Name          : $GIT_USERNAME"
+  gh_log "  > Email         : $GIT_EMAIL"
   gh_log_group_end ""
   gh_log ""
 }
