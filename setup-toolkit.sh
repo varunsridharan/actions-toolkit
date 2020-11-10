@@ -23,8 +23,6 @@ cd "${INSTALL_DIR}${GITHUB_SCRIPTS_FOLDER}/toolkit/"
 cp -r * "${INSTALL_DIR}"
 sed -i 's|/gh-toolkit/|'"$INSTALL_DIR"'|g' shell.sh
 
-echo "INSTALL_DIR : $INSTALL_DIR"
-cat shell.sh
 
 ## Setup Install Script
 #cd "${INSTALL_DIR}${GITHUB_SCRIPTS_FOLDER}/scripts/"
