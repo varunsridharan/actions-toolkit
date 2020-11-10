@@ -22,8 +22,8 @@ is_empty_var() {
 }
 
 gitconfig() {
-  GIT_EMAIL=""
-  GIT_USERNAME=""
+  GIT_EMAIL="githubactionbot@gmail.com"
+  GIT_USERNAME="Github Action Bot"
   LOCAL="no"
 
   if [ ! -z "$1" ]; then
