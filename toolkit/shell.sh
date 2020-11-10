@@ -34,7 +34,7 @@ gitconfig() {
     GIT_EMAIL="$2"
   fi
 
-  if [ -z "$3" ]; then
+  if [ ! -z "$3" ]; then
     LOCAL=false
   else
     LOCAL=true
