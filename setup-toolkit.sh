@@ -4,23 +4,35 @@ set -e
 GITHUB_SCRIPTS_FOLDER="actions-toolkit-main"
 GITHUB_SCRIPTS_URL="https://github.com/varunsridharan/actions-toolkit/archive/main.zip"
 
+if [ -z "$1" ]; then
+  INSTALL_DIR="/gh-toolkit/"
+else
+  INSTALL_DIR="$1"
+fi
+
 ## Clone Github Toolkit Files To /gh-toolkit/
-mkdir /gh-toolkit/
-cd /gh-toolkit/
+mkdir "${INSTALL_DIR}"
+cd "${INSTALL_DIR}"
 wget "$GITHUB_SCRIPTS_URL"
 unzip ./main.zip
-chmod -R 777 "/gh-toolkit/${GITHUB_SCRIPTS_FOLDER}/toolkit/"
-chmod -R 777 "/gh-toolkit/${GITHUB_SCRIPTS_FOLDER}/scripts/"
+chmod -R 777 "${INSTALL_DIR}${GITHUB_SCRIPTS_FOLDER}/toolkit/"
+chmod -R 777 "${INSTALL_DIR}${GITHUB_SCRIPTS_FOLDER}/scripts/"
 
 ## Copy Toolkit Datas
-cd "/gh-toolkit/${GITHUB_SCRIPTS_FOLDER}/toolkit/"
-cp -r * /gh-toolkit/
+cd "${INSTALL_DIR}${GITHUB_SCRIPTS_FOLDER}/toolkit/"
+cp -r * "${INSTALL_DIR}"
+
+sed -i "s/\/gh-toolkit/${INSTALL_DIR}/g" shell.sh
+
+echo "_------------------------------_"
+cat shell.sh
+echo "_------------------------------_"
 
 ## Setup Install Script
-cd "/gh-toolkit/${GITHUB_SCRIPTS_FOLDER}/scripts/"
+cd "${INSTALL_DIR}${GITHUB_SCRIPTS_FOLDER}/scripts/"
 cp -r * /usr/local/bin/
 
-## Removed Unwated Files.
-cd /gh-toolkit/
+## Removed Unwanted Files.
+cd "${INSTALL_DIR}"
 rm -rf main.zip
 rm -rf "${GITHUB_SCRIPTS_FOLDER}"
