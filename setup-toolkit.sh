@@ -21,8 +21,7 @@ chmod -R 777 "${INSTALL_DIR}${GITHUB_SCRIPTS_FOLDER}/scripts/"
 ## Copy Toolkit Datas
 cd "${INSTALL_DIR}${GITHUB_SCRIPTS_FOLDER}/toolkit/"
 cp -r * "${INSTALL_DIR}"
-
-sed -i "s/\/gh-toolkit/${INSTALL_DIR}/g" shell.sh
+sed -i 's|/gh-toolkit/|'"$INSTALL_DIR"'|g' shell.sh
 
 echo "_------------------------------_"
 cat shell.sh
