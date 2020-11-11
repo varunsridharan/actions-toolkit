@@ -41,16 +41,16 @@ gitconfig() {
   fi
 
   if [ "$LOCAL" = true ]; then
-    gh_log_group_start "🗃 Git Config"
+    gh_log "🗃 Git Config"
     git config user.email "$GIT_EMAIL"
     git config user.name "$GIT_USERNAME"
   else
-    gh_log_group_start "🗃 Git Global Config"
+    gh_log "🗃 Git Global Config"
     git config --global user.email "$GIT_EMAIL"
     git config --global user.name "$GIT_USERNAME"
   fi
   gh_log "  > Name          : $GIT_USERNAME"
   gh_log "  > Email         : $GIT_EMAIL"
-  gh_log_group_end ""
+  #gh_log ""
   gh_log ""
 }
